@@ -254,8 +254,8 @@ export default skin => {
             number: {
               widgetProps: {
                 customProps: {
-                  formatter: value => (value ? `${value} days` : ""),
-                  parser: value => value.replace(" days", "")
+                  formatter: value => (value ? `${value} (Days)` : ""),
+                  parser: value => value.replace(" (Days)", "")
                 }
               }
             }
@@ -306,6 +306,16 @@ export default skin => {
         estimatedcompleteon: {
           label: "Estimated Complete On",
           type: "number",
+          widgets: {
+            number: {
+              widgetProps: {
+                customProps: {
+                  formatter: value => (value ? `${value} (Days)` : ""),
+                  parser: value => value.replace(" (Days)", "")
+                }
+              }
+            }
+          },
           operators: ["equal"],
           fieldSettings: {
             min: 0,
@@ -343,6 +353,16 @@ export default skin => {
           label: "Clicked On",
           operators: ["equal", "not_equal"],
           type: "number",
+          widgets: {
+            number: {
+              widgetProps: {
+                customProps: {
+                  formatter: value => (value ? `${value} (Days)` : ""),
+                  parser: value => value.replace(" (Days)", "")
+                }
+              }
+            }
+          },
           fieldSettings: {
             min: 0,
             max: 100
