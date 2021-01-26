@@ -1,8 +1,8 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import { InputNumber, Select, Col } from "antd";
-const { Option } = Select;
-export default class NumberDayWidget extends PureComponent {
+import { InputNumber, Col } from "antd";
+
+export default class NumberDay extends PureComponent {
   static propTypes = {
     setValue: PropTypes.func.isRequired,
     placeholder: PropTypes.string,
@@ -27,10 +27,6 @@ export default class NumberDayWidget extends PureComponent {
     min: undefined,
     max: undefined,
     step: undefined
-  };
-
-  handleTypeChange = value => {
-    console.log(`selected ${value}`);
   };
 
   render() {
@@ -61,16 +57,6 @@ export default class NumberDayWidget extends PureComponent {
           onChange={this.handleChange}
           {...customProps}
         />
-        <Select
-          defaultValue="lucy"
-          style={{ width: 120 }}
-          onChange={handleTypeChange}
-        >
-          <Option value="hour">Hour</Option>
-          <Option value="day">Day</Option>
-          <Option value="month">Month</Option>
-          <Option value="year">Year</Option>
-        </Select>
       </Col>
     );
   }

@@ -15,7 +15,7 @@ import {
   Funcs,
   DateTimeFieldSettings
 } from "react-awesome-query-builder";
-import NumberDayWidget from "./components/widgets/NumberDay";
+import NumberDay from "./components/widgets/NumberDay";
 import moment from "moment";
 import en_US from "antd/lib/locale-provider/en_US";
 
@@ -135,7 +135,7 @@ export default skin => {
     days: {
       ...InitialConfig.types.number,
       widgets: {
-        NumberDayWidget,
+        NumberDay,
         widgets: {
           number: {
             widgetProps: {
